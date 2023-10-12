@@ -1,0 +1,56 @@
+:root{
+    --orange-light: #FDF3EB;
+    --orange-normal: #ED8A37;
+    --green-normal: #5D9B96;
+    --grey-dark: #2D3536;
+    --green-light:#EFF5F5;
+    background: #FDF3EB;
+    
+}
+
+@font-face {
+    font-family: causdex;
+    src: url(../../../public/Caudex-Bold.ttf);
+}
+@font-face {
+    font-family: now;
+    src: url(../../../public/Now-Regular.otf);
+}
+@font-face {
+    font-family:Black_Bones ;
+    src: url(../../../public/Black_Bones.ttf);
+}
+ 
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url('./assets/path.svg');
+}
+
+.wrapper{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+
+.svg-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .styled-svg {
+    fill: blue;
+    width: 200px;
+    height: 200px;
+  }

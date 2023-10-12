@@ -1,0 +1,147 @@
+/* OfferRideStep1.css */
+
+#container {
+  position: relative;
+  width: 1000px;
+  height: 503px;
+  margin: 50px auto 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px 0px #f2e8e0;
+}
+
+#offer-ride-title {
+  color: #2d3536;
+  font-family: Consolas;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+
+#step1 {
+  color: #5D9B96;
+  font-family: Consolas;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50px;
+  top: 116px;
+}
+
+#select-event {
+  color: #2d3536;
+  font-family: Consolas;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  position: absolute;
+  left: 50px;
+  top: 177px;
+}
+
+
+
+
+
+
+
+
+label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px; /* Add spacing between options */
+}
+
+#picker {
+  color: #2d3536;
+  font-family: Consolas;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: absolute;
+  right: 600px;
+  top: 298px;
+}
+
+#picker-option2 {
+  width: 170px;
+  color: #2d3536;
+  font-family: Consolas;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: absolute;
+  top: 298px;
+  left: 50px;
+}
+
+#nxt-button {
+  color: #C3C6C6;
+  font-family: Consolas;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  position: absolute;
+  left: 50px;
+  top: 359px;
+  display: flex;
+  width: 230px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #5D9B96;
+  background: #5D9B96;
+  text-decoration: none; /* Added text-decoration here */
+}
+
+#nxt-button:hover {
+  color: white;
+}
+
+a {
+  color: black;
+}
+
+#select-event{
+  position: absolute;
+  left: 50px;
+  top: 208px;
+  display: flex;
+  width: 380px;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 1px solid #5D9B96;
+}
+#event{
+  color: #2d3536;
+  font-family: Consolas;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 130%;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50px;
+  top: 165px;
+
+}
