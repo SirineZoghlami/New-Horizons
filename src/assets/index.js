@@ -31,6 +31,48 @@ import Eyeon from "./Eyeon.svg";
 import facebook from "./facebook.svg";
 import apple from "./apple.svg";
 import google from "./google.svg";
-import chevronright from "./chevronright.svg"
-import logo1 from "./logo1.png"
-export{discountframe,logo1,chevronright,facebook,google,apple,Eyeoff,Eyeon,handcoins,messagecircle,info,Logo,arrowuproghtgreen,carline,noridecar,whiteclock,claritycarline,clock,calendar,mappin,users,usercheck,userplus,frame,image,frame2,frame3,Union,search,profile,chevrondown,line2,Cardrivingbro,arrowupright,path};
+import chevronright from "./chevronright.svg";
+import logo1 from "./logo1.png";
+import avata_img from "./temp/Avatar.png";
+import no_user_there from "./no_user_there.svg";
+import line3 from "./line3.svg";
+export {
+  discountframe,
+  logo1,
+  chevronright,
+  facebook,
+  google,
+  apple,
+  Eyeoff,
+  Eyeon,
+  handcoins,
+  messagecircle,
+  info,
+  Logo,
+  arrowuproghtgreen,
+  carline,
+  noridecar,
+  whiteclock,
+  claritycarline,
+  clock,
+  calendar,
+  mappin,
+  users,
+  usercheck,
+  userplus,
+  frame,
+  image,
+  frame2,
+  frame3,
+  Union,
+  search,
+  profile,
+  chevrondown,
+  line2,
+  Cardrivingbro,
+  arrowupright,
+  path,
+  avata_img,
+  no_user_there,
+  line3,
+};

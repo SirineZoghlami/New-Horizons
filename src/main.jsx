@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./App";
 import "./index.css";
 import {
   OfferRide,
@@ -10,10 +10,6 @@ import {
   Header,
   Footer,
   Body,
-  Login,
-  Signup,
-  SuccessPage,
-  Failedpage,
   OfferRideStep1,
   OfferRideStep2,
   OfferRideStep3,
@@ -22,14 +18,16 @@ import {
   EventDetails,
   Profile,
   RideDetails,
-  AboutUs,
   Events,
   ReturnRideStep2,
   ReturnRideStep3,
   RideSubmitted,
   ReturnRideSubmitted,
-  Rides
+  Rides,
 } from "./components";
+
+import { AboutUs, Failedpage, Login, Signup, SuccessPage } from "./Pages";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = document.getElementById("root");
@@ -54,10 +52,13 @@ ReactDOM.createRoot(root).render(
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/return-ride-step2" element={<ReturnRideStep2 />} />
         <Route path="/return-ride-step3" element={<ReturnRideStep3 />} />
-        <Route path="/ride-submitted" element={< RideSubmitted/>} />
-        <Route path="/ride-submitted" element={< RideSubmitted/>} />
-        <Route path="/return-ride-submitted" element={< ReturnRideSubmitted/>} />    
-        <Route path="/rides" element={< Rides/>} />
+        <Route path="/ride-submitted" element={<RideSubmitted />} />
+        <Route path="/ride-submitted" element={<RideSubmitted />} />
+        <Route
+          path="/return-ride-submitted"
+          element={<ReturnRideSubmitted />}
+        />
+        <Route path="/rides" element={<Rides />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
