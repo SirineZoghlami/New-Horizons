@@ -11,6 +11,8 @@ import {
   no_user_there,
   line3,
 } from "../../../assets";
+import { GetHM } from "../../../functions/times";
+import { MakeArray } from "../../../functions/arrays";
 
 const default_ride = {
   id_ride: 0,
@@ -29,7 +31,10 @@ const Ride = ({ ride = default_ride }) => {
     <div className="overlap-group-wrapper">
       <div className="overlap-group-3">
         <div className="div-10">
-          <p className="ecology-forum-for">ECOLOGY FORUM FOR CLIMATE CHANGE</p>
+          <p className="ecology-forum-for">
+            {ride.departureDate} - From {ride.departLocation} To{" "}
+            {ride.arrivalLocation}{" "}
+          </p>
           <div className="div-11">
             <div className="div-12">
               <img className="img" alt="Users" src={users} />
@@ -45,7 +50,7 @@ const Ride = ({ ride = default_ride }) => {
           <div className="frame-wrapper-4">
             <div className="frame-wrapper-5">
               <div className="div-4">
-                <div className="text-wrapper-2">{ride.pickingTime}</div>
+                <div className="text-wrapper-2">{GetHM(ride.pickingTime)}</div>
                 <div className="div-5">
                   <img className="img" alt="Map pin" src={mappin} />
                   <p className="text-wrapper">{ride.departLocation}</p>
@@ -56,7 +61,7 @@ const Ride = ({ ride = default_ride }) => {
           <img className="line-2" alt="Line" src={line3} />
           <div className="frame-wrapper-2">
             <div className="div-4">
-              <div className="text-wrapper-2">{ride.arrivalTime}</div>
+              <div className="text-wrapper-2">{GetHM(ride.arrivalTime)}</div>
               <div className="div-5">
                 <img className="img" alt="Map pin" src={mappin} />
                 <p className="text-wrapper">{ride.arrivalLocation}</p>
@@ -87,34 +92,25 @@ const Ride = ({ ride = default_ride }) => {
             <div className="text-wrapper-5">Join ride</div>
           </div>
           <div className="div-15">
-            <div className="frame-wrapper-3">
+            {/* <div className="frame-wrapper-3">
               <div className="div-9">
                 <img className="img-2" alt="Ellipse" src={avata_img} />
                 <div className="text-wrapper-6">Driver</div>
                 <div className="text-wrapper-7">Oliver Bern</div>
               </div>
-            </div>
-            <div className="frame-wrapper-3">
-              <div className="div-9">
-                <img className="img-2" alt="Ellipse" src={avata_img} />
-                <div className="text-wrapper-6">Passenger</div>
-                <div className="text-wrapper-7">Kira Schneider</div>
-              </div>
-            </div>
-            <div className="frame-wrapper-3">
-              <div className="div-9">
-                <img className="img-2" alt="Ellipse" src={avata_img} />
-                <div className="text-wrapper-6">Passenger</div>
-                <div className="text-wrapper-7">Ben Petterson</div>
-              </div>
-            </div>
-            <div className="frame-wrapper-3">
-              <div className="div-9">
-                <img className="img-2" alt="Frame" src={no_user_there} />
-                <div className="text-wrapper-6">Passenger</div>
-                <div className="text-wrapper-9">Seat for you</div>
-              </div>
-            </div>
+            </div> */}
+
+            {MakeArray(ride.seatsAvailable).map((seat, index) => {
+              return (
+                <div className="frame-wrapper-3">
+                  <div className="div-9">
+                    <img className="img-2" alt="Ellipse" src={no_user_there} />
+                    <div className="text-wrapper-6">Passenger</div>
+                    <div className="text-wrapper-9">Oliver Bern</div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <div className="div-16">
             <img className="img" alt="Message circle" src={messagecircle} />
