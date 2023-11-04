@@ -1,9 +1,9 @@
 .ride-container-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 50px; /* Adjust the margin as needed */
-  font: 400 16px/130% "Now", sans-serif;
+  max-width: calc(100vw - 20px);
 }
 
 .ride-container {
@@ -17,29 +17,17 @@
 }
 /* RideInfo.css */
 
-.ride-container-wrapper .custom-container {
-  box-sizing: border-box;
-  color: var(--foundation-grey-dark, #2d3536);
-  text-align: left;
-  font: var(--p-3, 400 14px/130% "Now", sans-serif);
-  position: absolute;
-  width: 81px;
-  top: 30px;
-  left: 30px;
-  
+.ride-container-wrapper {
+  min-height: 100vh;
 }
 
-/* BerlinGermany.css */
-
-.departure-location,
-.departure-location * {
-  box-sizing: border-box;
+.card-raide {
+  height: fit-content;
+  width: fit-content;
+  margin: 30px 0px;
 }
 
-.departure-location {
-  color: var(--foundation-grey-dark, #2d3536);
-  text-align: left;
-  font: var(--p-3, 400 14px/130% "Now", sans-serif);
+.card-raide .overlap-group-wrapper {
   position: relative;
+  left: 0px;
 }
-

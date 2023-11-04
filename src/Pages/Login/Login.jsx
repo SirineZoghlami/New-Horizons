@@ -3,11 +3,14 @@ import { useState } from "react";
 import { Eyeoff, Eyeon, facebook, google, apple } from "../../assets";
 
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../../utils/axios";
+import { useDispatch } from "react-redux";
+import { LoginUser } from "../../redux/User.reducer";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
@@ -50,24 +53,14 @@ const Login = () => {
     }
 
     if (isValid) {
-      // Make the authentication request
-      axios
-        .post("http://127.0.0.1:3309/api/auth/login", credentials)
-        .then((response) => {
-          // Extract the token from the response data
-          const authToken = response.data.accessToken;
-
-          // Store the token securely (e.g., in localStorage)
-          localStorage.setItem("authToken", authToken);
-          console.log(authToken);
-          navigate("/");
-          // Update authenticated state in your application
-          // (e.g., using a state management library like Redux or React Context)
+      dispatch(
+        LoginUser({
+          data: credentials,
+          callback: () => {
+            navigate("/");
+          },
         })
-        .catch((error) => {
-          // Handle authentication error
-          console.error("Authentication error:", error);
-        });
+      );
     }
   };
   return (
