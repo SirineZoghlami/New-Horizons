@@ -22,10 +22,16 @@ import {
   ReturnRideStep3,
   RideSubmitted,
   ReturnRideSubmitted,
-  Rides,
 } from "./components";
 
-import { AboutUs, Failedpage, Login, Signup, SuccessPage } from "./Pages";
+import {
+  AboutUs,
+  Failedpage,
+  Login,
+  Signup,
+  SuccessPage,
+  Rides,
+} from "./Pages";
 
 import { Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -33,7 +39,6 @@ import { GetUserByToken } from "./redux/User.reducer";
 
 const App = () => {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(GetUserByToken());
   }, []);

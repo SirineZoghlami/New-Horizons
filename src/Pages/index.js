@@ -5,5 +5,6 @@ import Step2 from "./Signup/Step2";
 import SuccessPage from "./SuccessPage/SuccessPage";
 import Failedpage from "./Signup/Failedpage";
 import AboutUs from "./AboutUs/AboutUs";
+import Rides from "./Rides/Rides";
 
-export { Signup, Failedpage, SuccessPage, Step1, Step2, Login, AboutUs };
+export { Signup, Failedpage, SuccessPage, Step1, Step2, Login, AboutUs, Rides };

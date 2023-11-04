@@ -53,6 +53,7 @@ const GetUserByToken = () => {
 
 const DisconnectUser = () => {
   return async (dispatch) => {
+    localStorage.removeItem("authToken");
     dispatch({
       type: keys.set_user,
       value: null,

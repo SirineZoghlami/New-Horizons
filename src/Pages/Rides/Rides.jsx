@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 import "./Rides.css";
-import Ride from "../Cards/RideCard/Ride";
-import "../Body/Body.css";
+import Ride from "../../components/Cards/RideCard/Ride";
+import "../../components/Body/Body.css";
+import { useSelector } from "react-redux";
 
 export const Rides = ({ ...props }) => {
   const [rideData, setRideData] = useState([]);
+  const user = useSelector((state) => state.UserReducer.user);
 
   useEffect(() => {
     console.log("Fetching data...");
@@ -25,14 +27,14 @@ export const Rides = ({ ...props }) => {
   const fake_data = [
     {
       id_ride: 1,
-      departLocation: "Montreal",
-      arrivalLocation: "Toronto",
-      price: 20,
-      seatsAvailable: 2,
-      arrivalTime: "12:00",
+      departLocation: "Montreal 50",
+      arrivalLocation: "Toronto 50",
+      price: 50,
+      seatsAvailable: 6,
+      arrivalTime: "15:00",
       commentRide: "I am a comment",
       departureDate: "2021-03-20",
-      pickingTime: "10:00",
+      pickingTime: "12:00",
     },
     {
       id_ride: 2,
@@ -50,7 +52,7 @@ export const Rides = ({ ...props }) => {
       departLocation: "Montreal",
       arrivalLocation: "Toronto",
       price: 20,
-      seatsAvailable: 2,
+      seatsAvailable: 4,
       arrivalTime: "12:00",
       commentRide: "I am a comment",
       departureDate: "2021-03-20",
@@ -72,7 +74,7 @@ export const Rides = ({ ...props }) => {
       departLocation: "Montreal",
       arrivalLocation: "Toronto",
       price: 20,
-      seatsAvailable: 2,
+      seatsAvailable: 5,
       arrivalTime: "12:00",
       commentRide: "I am a comment",
       departureDate: "2021-03-20",
@@ -95,20 +97,16 @@ export const Rides = ({ ...props }) => {
     <div>
       <Navbar />
       <div>
+        {user && user.driver && (
+          <div className="rides-cont">
+            <div className="create-ride-btn">Create Ride</div>
+          </div>
+        )}
+
         <div className="ride-container-wrapper">
           {fake_data.map((ride, index) => (
             <div className="frame card-raide" key={index}>
-              <Ride
-                id_ride={ride.id_ride}
-                departLocation={ride.departLocation}
-                arrivalLocation={ride.arrivalLocation}
-                price={ride.price}
-                seatsAvailable={ride.seatsAvailable}
-                arrivalTime={ride.arrivalTime}
-                commentRide={ride.commentRide}
-                departureDate={ride.departureDate}
-                pickingTime={ride.pickingTime}
-              />
+              <Ride ride={ride} />
             </div>
           ))}
         </div>

@@ -31,3 +31,22 @@
   position: relative;
   left: 0px;
 }
+
+.rides-cont {
+  width: fit-content;
+  margin: 100px auto 0px auto;
+}
+
+.rides-cont .create-ride-btn {
+  display: flex;
+  font-size: 20px;
+  padding: 15px 75px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--foundation-green-normal, #5d9b96);
+  text-decoration: none;
+  font-family: now;
+  cursor: pointer;
+  color: var(--foundation-orange-light, #fdf3eb);
+}
